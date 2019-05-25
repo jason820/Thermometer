@@ -24,7 +24,7 @@ namespace 溫度計
                 this.zabbix_host = System.Configuration.ConfigurationManager.AppSettings["zabbix_host"];
                 this.t1key = System.Configuration.ConfigurationManager.AppSettings["t1.key"];
                 this.t2key = System.Configuration.ConfigurationManager.AppSettings["t2.key"];
-                timer1.Interval = 10 * 1000;
+                timer1.Interval = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["interval"]) * 1000;
                 timer1.Enabled = true;
             }
 
